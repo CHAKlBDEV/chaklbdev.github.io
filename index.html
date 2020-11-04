@@ -21,16 +21,38 @@
 				font: 16px/1.6 Roboto, Helvetica, sans-serif;
 				font-weight: 300;
 			}
-			#sidebar {
-				top: 0px;
-				left: Opx;
-				bottom: 0px;
-				width: 25%;
-				position: fixed;
-				background-image: url('images/background.jpg');
-				background-repeat: no-repeat;
-				background-size: auto 100%;
-				background-position: center;
+			a {
+				text-decoration: none;
+				color: inherit;
+			}
+			html {
+				scroll-behavior: smooth;
+			}
+			@media only screen and (min-width: 600px) {
+				#sidebar {
+					top: 0px;
+					left: 0px;
+					bottom: 0px;
+					width: 25%;
+					position: fixed;
+				}
+				#main-content {
+					margin-left: 25%;
+				}
+				.timeline-inner {
+					flex-wrap: nowrap;
+				}
+				.timeline-item-illustration {
+					max-width: 25%;
+				}
+			}
+			@media only screen and (max-width: 600px) {
+				.timeline-inner {
+					flex-wrap: wrap;
+				}
+				.timeline-item-illustration {
+					width: 100%;
+				}
 			}
 			#sidebar-overlay {
 				width: 100%;
@@ -55,17 +77,14 @@
 			.links-list li {
 				margin-bottom: 8px;
 			}
-			a {
-				text-decoration: none;
-				color: inherit;
-			}
-
 			.timeline-item {
 				display: flex;
 				justify-content: flex-start;
+				flex-wrap: nowrap;
 			}
-			html {
-				scroll-behavior: smooth;
+			.timeline-inner {
+				display: flex;
+				justify-content: space-around;
 			}
 			.timeline-item-date {
 				font-style: italic;
@@ -85,7 +104,6 @@
 				align-self: center;
 			}
 			.timeline-item-illustration {
-				max-width: 25%;
 				padding: 20px;
 			}
 
@@ -94,9 +112,6 @@
 			a:focus {
 				color: inherit;
 				text-decoration: underline;
-			}
-			#main-content {
-				margin-left: 25%;
 			}
 			.techs {
 				display: flex;
@@ -164,90 +179,91 @@
 				<p>Here's a timeline of all the projects that I have worked on.</p>
 				<div class="timeline-item">
 					<div class="timeline-item-date">Aug 2020 - Now</div>
-					<div class="timeline-item-content">
-						<h5>Freelancer at upwork</h5>
-						<p>
-							Now developing a web application using the MERN stack that allows
-							users to register domains and create online stores. Passwordless
-							authentication using magic links. External APIs used: Stripe,
-							Namecheap.
-						</p>
-						<h6 class="font-weight-light">Technologies:</h6>
-						<div class="techs">
-							<div class="tech">MongoDb</div>
-							<div class="tech">ExpressJs</div>
-							<div class="tech">ReactJs</div>
-							<div class="tech">NodeJs</div>
-							<div class="tech">Magic Links</div>
-							<div class="tech">Stripe</div>
-							<div class="tech">Bootstrap</div>
-							<div class="tech">Redux</div>
-							<div class="tech">ReCaptcha</div>
+					<div class="timeline-inner">
+						<div class="timeline-item-content">
+							<h5>Freelancer at upwork</h5>
+							<p>
+								Now developing a web application using the MERN stack that
+								allows users to register domains and create online stores.
+								Passwordless authentication using magic links. External APIs
+								used: Stripe, Namecheap.
+							</p>
+							<h6 class="font-weight-light">Technologies:</h6>
+							<div class="techs">
+								<div class="tech">MongoDb</div>
+								<div class="tech">ExpressJs</div>
+								<div class="tech">ReactJs</div>
+								<div class="tech">NodeJs</div>
+								<div class="tech">Magic Links</div>
+								<div class="tech">Stripe</div>
+								<div class="tech">Bootstrap</div>
+								<div class="tech">Redux</div>
+								<div class="tech">ReCaptcha</div>
+							</div>
 						</div>
-					</div>
-					<div class="timeline-item-illustration" class="shadow">
-						<a href="images/sc1.png" target="_blank"
-							><img
-								src="images/sc1.png"
-								alt="Web Application"
-								class="img-fluid"
-						/></a>
+						<div class="timeline-item-illustration" class="shadow">
+							<a href="images/sc1.png" target="_blank"
+								><img
+									src="images/sc1.png"
+									alt="Web Application"
+									class="img-fluid"
+							/></a>
+						</div>
 					</div>
 				</div>
 				<div class="timeline-item">
 					<div class="timeline-item-date">June 2020</div>
-					<div class="timeline-item-content">
-						<h5>RBC Bike Shop</h5>
-						<p>
-							Practise project after I learned how to create cross-platform apps
-							using the Flutter UI framework. Back-end server built using Nodejs
-							and used Sequelize ORM to communicate with the MySQL database.
-							Launch very soon.
-						</p>
-						<h6 class="font-weight-light">Technologies:</h6>
-						<div class="techs">
-							<div class="tech">Flutter</div>
-							<div class="tech">Dart</div>
-							<div class="tech">ExpressJs</div>
-							<div class="tech">Sequelize</div>
-							<div class="tech">Provider</div>
-							<div class="tech">Sqlite</div>
+					<div class="timeline-inner">
+						<div class="timeline-item-content">
+							<h5>RBC Bike Shop</h5>
+							<p>
+								Practise project after I learned how to create cross-platform
+								apps using the Flutter UI framework. Back-end server built using
+								Nodejs and used Sequelize ORM to communicate with the MySQL
+								database. Launch very soon.
+							</p>
+							<h6 class="font-weight-light">Technologies:</h6>
+							<div class="techs">
+								<div class="tech">Flutter</div>
+								<div class="tech">Dart</div>
+								<div class="tech">ExpressJs</div>
+								<div class="tech">Sequelize</div>
+								<div class="tech">Provider</div>
+								<div class="tech">Sqlite</div>
+							</div>
 						</div>
-					</div>
-					<div class="timeline-item-illustrator">
-						<iframe
-							width="426"
-							height="240"
-							src="https://www.youtube.com/embed/3Ttu51qNUOo"
-						>
-						</iframe>
+						<div class="timeline-item-illustrator">
+							<iframe src="https://www.youtube.com/embed/3Ttu51qNUOo"> </iframe>
+						</div>
 					</div>
 				</div>
 				<div class="timeline-item">
 					<div class="timeline-item-date">Dec 2019</div>
-					<div class="timeline-item-content">
-						<h5>MineMan</h5>
-						<p>
-							Developed a desktop application for the accounting department of a
-							mining company based in Sétif, Algeria. Used C#/Winforms and
-							sqlite database.
-						</p>
-						<h6 class="font-weight-light">Technologies:</h6>
-						<div class="techs">
-							<div class="tech">C#</div>
-							<div class="tech">.NET</div>
-							<div class="tech">Winforms</div>
-							<div class="tech">Sqlite</div>
-							<div class="tech">MigraDoc</div>
+					<div class="timeline-inner">
+						<div class="timeline-item-content">
+							<h5>MineMan</h5>
+							<p>
+								Developed a desktop application for the accounting department of
+								a mining company based in Sétif, Algeria. Used C#/Winforms and
+								sqlite database.
+							</p>
+							<h6 class="font-weight-light">Technologies:</h6>
+							<div class="techs">
+								<div class="tech">C#</div>
+								<div class="tech">.NET</div>
+								<div class="tech">Winforms</div>
+								<div class="tech">Sqlite</div>
+								<div class="tech">MigraDoc</div>
+							</div>
 						</div>
-					</div>
-					<div class="timeline-item-illustration" class="shadow">
-						<a href="images/sc2.jpg" target="_blank"
-							><img
-								src="images/sc2.jpg"
-								alt="Desktop Application"
-								class="img-fluid"
-						/></a>
+						<div class="timeline-item-illustration" class="shadow">
+							<a href="images/sc2.jpg" target="_blank"
+								><img
+									src="images/sc2.jpg"
+									alt="Desktop Application"
+									class="img-fluid"
+							/></a>
+						</div>
 					</div>
 				</div>
 				<div class="timeline-item">
@@ -268,27 +284,25 @@
 				</div>
 				<div class="timeline-item">
 					<div class="timeline-item-date">Mar 2019</div>
-					<div class="timeline-item-content">
-						<h5>Dlala</h5>
-						<p>
-							A classifieds mobile app built using a PHP backend powered by Slim
-							framework and a native android app. Deployed the app on Play Store
-							and then removed it. (Too busy with studies to maintain it)
-						</p>
-						<h6 class="font-weight-light">Technologies:</h6>
-						<div class="techs">
-							<div class="tech">PHP</div>
-							<div class="tech">Slim Framework</div>
-							<div class="tech">Android SDK</div>
+					<div class="timeline-inner">
+						<div class="timeline-item-content">
+							<h5>Dlala</h5>
+							<p>
+								A classifieds mobile app built using a PHP backend powered by
+								Slim framework and a native android app. Deployed the app on
+								Play Store and then removed it. (Too busy with studies to
+								maintain it)
+							</p>
+							<h6 class="font-weight-light">Technologies:</h6>
+							<div class="techs">
+								<div class="tech">PHP</div>
+								<div class="tech">Slim Framework</div>
+								<div class="tech">Android SDK</div>
+							</div>
 						</div>
-					</div>
-					<div class="timeline-item-illustrator">
-						<iframe
-							width="426"
-							height="240"
-							src="https://www.youtube.com/embed/M0Di--lbNF4"
-						>
-						</iframe>
+						<div class="timeline-item-illustrator">
+							<iframe src="https://www.youtube.com/embed/M0Di--lbNF4"> </iframe>
+						</div>
 					</div>
 				</div>
 			</div>
