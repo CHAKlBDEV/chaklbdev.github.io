@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, shrink-to-fit=no"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+			integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+			crossorigin="anonymous"
+		/>
+		<script
+			src="https://kit.fontawesome.com/b66c737d99.js"
+			crossorigin="anonymous"
+		></script>
+		<style>
+			body {
+				font: 16px/1.6 Roboto, Helvetica, sans-serif;
+				font-weight: 300;
+			}
+			#sidebar {
+				top: 0px;
+				left: Opx;
+				bottom: 0px;
+				width: 25%;
+				position: fixed;
+				background-image: url('images/background.jpg');
+				background-repeat: no-repeat;
+				background-size: auto 100%;
+				background-position: center;
+			}
+			#sidebar-overlay {
+				width: 100%;
+				height: 100%;
+
+				background-color: rgba(13, 13, 145, 0.85);
+			}
+			#sidebar-inner {
+				height: 100%;
+			}
+			#profile-pic {
+				width: 10rem;
+				height: 10rem;
+			}
+			#titles {
+				font-size: 200;
+				font-weight: 500;
+			}
+			.links-list {
+				list-style-type: none;
+			}
+			.links-list li {
+				margin-bottom: 8px;
+			}
+			a {
+				text-decoration: none;
+				color: inherit;
+			}
+
+			.timeline-item {
+				display: flex;
+				justify-content: flex-start;
+			}
+			html {
+				scroll-behavior: smooth;
+			}
+			.timeline-item-date {
+				font-style: italic;
+				opacity: 0.7;
+				align-self: stretch;
+				width: 100px;
+				flex-shrink: 0;
+				border-right: 6px rgba(13, 13, 145, 0.7) solid;
+			}
+			.timeline-item:hover > .timeline-item-date {
+				border-right: 6px rgba(13, 13, 145, 1) solid;
+				opacity: 0.9;
+			}
+			.timeline-item-content {
+				padding-left: 20px;
+				padding-bottom: 8px;
+				align-self: center;
+			}
+			.timeline-item-illustration {
+				max-width: 25%;
+				padding: 20px;
+			}
+
+			a:hover,
+			a:active,
+			a:focus {
+				color: inherit;
+				text-decoration: underline;
+			}
+			#main-content {
+				margin-left: 25%;
+			}
+			.techs {
+				display: flex;
+				justify-content: flex-start;
+				flex-wrap: wrap;
+			}
+			.tech {
+				background-color: rgba(13, 13, 145, 0.6);
+				padding: 1px 8px 1px 8px;
+				color: #f8f9fa;
+				font-size: 12px;
+				margin-left: 5px;
+				margin-bottom: 4px;
+			}
+			.tech:hover {
+				background-color: rgba(13, 13, 145, 8);
+			}
+		</style>
+		<title>Chakib Baiker - Full Stack Web Developer - Portfolio</title>
+	</head>
+	<body class="bg-light">
+		<div id="sidebar">
+			<div id="sidebar-overlay">
+				<div id="sidebar-inner" class="py-5">
+					<div id="topcard" class="py-3 text-center text-white">
+						<div id="picture-section" class="mb-2">
+							<img
+								src="images/mypic.jpg"
+								id="profile-pic"
+								class="img-fluid rounded-circle"
+								alt="Chakib Baiker"
+							/>
+						</div>
+						<div id="titles" class="text-uppercase">
+							<h4>Chakib Baiker</h4>
+							<h6>Full Stack Software Engineer</h6>
+						</div>
+					</div>
+					<div id="links" class="text-uppercase text-white py-3">
+						<ul class="links-list">
+							<li><a href="#portfolio" class="sidebar-link">Portfolio</a></li>
+							<li><a href="#offer" class="sidebar-link">My offer</a></li>
+							<li><a href="#contact" class="sidebar-link">Contact me</a></li>
+							<li>
+								<a href="assets/resume.pdf" class="sidebar-link" target="_blank"
+									>My resume</a
+								>
+							</li>
+							<li>
+								<a
+									href="https://dev.to/chaklbdev"
+									class="sidebar-link"
+									target="_blank"
+									>Personal Blog</a
+								>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="main-content" class="p-5">
+			<div id="portfolio" class="mb-5">
+				<h1>Portfolio</h1>
+				<p>Here's a timeline of all the projects that I have worked on.</p>
+				<div class="timeline-item">
+					<div class="timeline-item-date">Aug 2020 - Now</div>
+					<div class="timeline-item-content">
+						<h5>Freelancer at upwork</h5>
+						<p>
+							Now developing a web application using the MERN stack that allows
+							users to register domains and create online stores. Passwordless
+							authentication using magic links. External APIs used: Stripe,
+							Namecheap.
+						</p>
+						<h6 class="font-weight-light">Technologies:</h6>
+						<div class="techs">
+							<div class="tech">MongoDb</div>
+							<div class="tech">ExpressJs</div>
+							<div class="tech">ReactJs</div>
+							<div class="tech">NodeJs</div>
+							<div class="tech">Magic Links</div>
+							<div class="tech">Stripe</div>
+							<div class="tech">Bootstrap</div>
+							<div class="tech">Redux</div>
+							<div class="tech">ReCaptcha</div>
+						</div>
+					</div>
+					<div class="timeline-item-illustration" class="shadow">
+						<a href="images/sc1.png" target="_blank"
+							><img
+								src="images/sc1.png"
+								alt="Web Application"
+								class="img-fluid"
+						/></a>
+					</div>
+				</div>
+				<div class="timeline-item">
+					<div class="timeline-item-date">June 2020</div>
+					<div class="timeline-item-content">
+						<h5>RBC Bike Shop</h5>
+						<p>
+							Practise project after I learned how to create cross-platform apps
+							using the Flutter UI framework. Back-end server built using Nodejs
+							and used Sequelize ORM to communicate with the MySQL database.
+							Launch very soon.
+						</p>
+						<h6 class="font-weight-light">Technologies:</h6>
+						<div class="techs">
+							<div class="tech">Flutter</div>
+							<div class="tech">Dart</div>
+							<div class="tech">ExpressJs</div>
+							<div class="tech">Sequelize</div>
+							<div class="tech">Provider</div>
+							<div class="tech">Sqlite</div>
+						</div>
+					</div>
+					<div class="timeline-item-illustrator">
+						<iframe
+							width="426"
+							height="240"
+							src="https://www.youtube.com/embed/3Ttu51qNUOo"
+						>
+						</iframe>
+					</div>
+				</div>
+				<div class="timeline-item">
+					<div class="timeline-item-date">Dec 2019</div>
+					<div class="timeline-item-content">
+						<h5>MineMan</h5>
+						<p>
+							Developed a desktop application for the accounting department of a
+							mining company based in Sétif, Algeria. Used C#/Winforms and
+							sqlite database.
+						</p>
+						<h6 class="font-weight-light">Technologies:</h6>
+						<div class="techs">
+							<div class="tech">C#</div>
+							<div class="tech">.NET</div>
+							<div class="tech">Winforms</div>
+							<div class="tech">Sqlite</div>
+							<div class="tech">MigraDoc</div>
+						</div>
+					</div>
+					<div class="timeline-item-illustration" class="shadow">
+						<a href="images/sc2.jpg" target="_blank"
+							><img
+								src="images/sc2.jpg"
+								alt="Desktop Application"
+								class="img-fluid"
+						/></a>
+					</div>
+				</div>
+				<div class="timeline-item">
+					<div class="timeline-item-date">Oct 2019</div>
+					<div class="timeline-item-content">
+						<h5>Software Engineer Internship</h5>
+						<p>
+							Gained valuable experience on web development and software
+							engineering from a software development company.
+						</p>
+						<h6 class="font-weight-light">Technologies:</h6>
+						<div class="techs">
+							<div class="tech">Nodejs</div>
+							<div class="tech">MongoDb</div>
+							<div class="tech">Git</div>
+						</div>
+					</div>
+				</div>
+				<div class="timeline-item">
+					<div class="timeline-item-date">Mar 2019</div>
+					<div class="timeline-item-content">
+						<h5>Dlala</h5>
+						<p>
+							A classifieds mobile app built using a PHP backend powered by Slim
+							framework and a native android app. Deployed the app on Play Store
+							and then removed it. (Too busy with studies to maintain it)
+						</p>
+						<h6 class="font-weight-light">Technologies:</h6>
+						<div class="techs">
+							<div class="tech">PHP</div>
+							<div class="tech">Slim Framework</div>
+							<div class="tech">Android SDK</div>
+						</div>
+					</div>
+					<div class="timeline-item-illustrator">
+						<iframe
+							width="426"
+							height="240"
+							src="https://www.youtube.com/embed/M0Di--lbNF4"
+						>
+						</iframe>
+					</div>
+				</div>
+			</div>
+			<div id="offer" class="mb-5">
+				<h1>My Offer</h1>
+				<p>
+					I'm a junior full-stack software engineer with 1 year of experience.
+					(And counting!).
+				</p>
+				<p>
+					I developed and launched multiple projects from the ground up, both
+					front-end (web/mobile) and backend and I'm ready for the next
+					challenge!
+				</p>
+				<p>
+					My current toolset includes Nodejs, Php, ReactJs, Redux, Flutter and
+					C# for desktop application. I can help you with:
+				</p>
+				<ul>
+					<li>Designing and creating web/mobile application from scratch</li>
+					<li>Leading/co-developing the back-end/front-end</li>
+				</ul>
+				<p>
+					Got a job for me? An idea?
+					<b><a href="#contact">Let's discuss it!</a></b>
+				</p>
+			</div>
+			<div id="contact">
+				<h1>Contact Me</h1>
+				<p>I'm available for hire and to discuss any ideas</p>
+				<p>
+					<a href="mailto:baikerchakib@gmail.com"
+						><i class="fas fa-envelope"></i> baikerchakib@gmail.com</a
+					>
+				</p>
+				<p>
+					<a href="https://instagram.com/chakibbaiker"
+						><i class="fab fa-instagram"></i> @chakibbaiker</a
+					>
+				</p>
+				<p>
+					<a href="https://t.me/chakibbaiker"
+						><i class="fab fa-telegram"></i> @chakibbaiker</a
+					>
+				</p>
+				<p>
+					<a href="https://github.com/chaklbdev"
+						><i class="fab fa-github"></i> @chaklbdev</a
+					>
+				</p>
+			</div>
+		</div>
+		<script
+			src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+			integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+			crossorigin="anonymous"
+		></script>
+	</body>
+</html>
